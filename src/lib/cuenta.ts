@@ -22,13 +22,14 @@ export async function registrarCliente(datos: DatosRegistro): Promise<Sesion | n
 }
 
 /** Revoca el token en el servidor (si responde) y borra la sesión local. */
-export async function cerrarSesion(destino = "/") {
+/** Revoca el token en la API y cierra la sesión en este navegador. `aviso` se muestra luego en /ingresar. */
+export async function cerrarSesion(destino = "/", aviso?: string) {
   try {
     await api("/auth/logout", { metodo: "POST" });
   } catch {
     // Si el servidor no responde, igual se cierra la sesión en este navegador.
   }
-  cerrarSesionLocal();
+  cerrarSesionLocal(aviso);
   window.location.assign(destino);
 }
 
