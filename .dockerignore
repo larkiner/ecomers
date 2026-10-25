@@ -1,0 +1,19 @@
+# Se instalan y se compilan dentro de la imagen
+node_modules
+.next
+out
+build
+
+# Variables locales: nunca entran a la imagen (NEXT_PUBLIC_API_URL llega como --build-arg)
+.env*
+!.env.example
+
+# Control de versiones, docs y Docker
+.git
+.gitignore
+README.md
+AGENTS.md
+CLAUDE.md
+Dockerfile
+.dockerignore
+*.log

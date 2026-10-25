@@ -1,0 +1,122 @@
+/* ECOMERS: tokens del sistema de diseño. Única fuente de colores, espacios, radios, movimiento y capas.
+   Paleta monocromática: blanco y negro, con grises neutros. El único color es el rojo de error (--danger). */
+
+:root,
+[data-theme="light"] {
+  color-scheme: light;
+  --background: #ffffff;
+  --surface: #ffffff;
+  --surface-muted: #f4f4f4;
+  --border: #e6e6e6;
+  --border-input: #8c8c8c;
+  --foreground: #0a0a0a;
+  --foreground-muted: #5e5e5e;
+  --primary: #0a0a0a;
+  --primary-hover: #2e2e2e;
+  --on-primary: #ffffff;
+  --primary-soft: #efefef;
+  --on-primary-soft: #0a0a0a;
+  --brand-tint: #cfcfcf;
+  --brand-deep: #0a0a0a;
+  --on-brand-deep: #fafafa;
+  --accent: #0a0a0a;
+  --accent-soft: #0a0a0a;
+  --on-accent-soft: #ffffff;
+  --success: #0a0a0a;
+  --success-soft: #efefef;
+  --on-success-soft: #0a0a0a;
+  --danger: #c0261a;
+  --on-danger: #ffffff;
+  --danger-soft: #fbeceb;
+  --on-danger-soft: #9b1c13;
+  --warning: #0a0a0a;
+  --warning-soft: #efefef;
+  --on-warning-soft: #0a0a0a;
+  --info: #0a0a0a;
+  --info-soft: #efefef;
+  --on-info-soft: #0a0a0a;
+  --ring: #0a0a0a;
+  --overlay: rgba(0, 0, 0, 0.5);
+  --on-overlay: #ffffff;
+  --overlay-track: rgba(255, 255, 255, 0.3);
+  /* Material translúcido del encabezado y los paneles: el contenido pasa por debajo. */
+  --material: rgba(255, 255, 255, 0.72);
+  --material-borde: rgba(0, 0, 0, 0.08);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 24px 60px rgba(0, 0, 0, 0.18);
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+  --background: #000000;
+  --surface: #0b0b0b;
+  --surface-muted: #161616;
+  --border: #262626;
+  --border-input: #737373;
+  --foreground: #f5f5f5;
+  --foreground-muted: #a3a3a3;
+  --primary: #f5f5f5;
+  --primary-hover: #d4d4d4;
+  --on-primary: #0a0a0a;
+  --primary-soft: #1f1f1f;
+  --on-primary-soft: #f5f5f5;
+  --brand-tint: #3a3a3a;
+  --brand-deep: #0b0b0b;
+  --on-brand-deep: #f5f5f5;
+  --accent: #f5f5f5;
+  --accent-soft: #f5f5f5;
+  --on-accent-soft: #0a0a0a;
+  --success: #f5f5f5;
+  --success-soft: #1f1f1f;
+  --on-success-soft: #f5f5f5;
+  --danger: #ff6b5e;
+  --on-danger: #1a0503;
+  --danger-soft: #2a0f0d;
+  --on-danger-soft: #ffb4ab;
+  --warning: #f5f5f5;
+  --warning-soft: #1f1f1f;
+  --on-warning-soft: #f5f5f5;
+  --info: #f5f5f5;
+  --info-soft: #1f1f1f;
+  --on-info-soft: #f5f5f5;
+  --ring: #f5f5f5;
+  --overlay: rgba(0, 0, 0, 0.65);
+  --on-overlay: #ffffff;
+  --overlay-track: rgba(255, 255, 255, 0.25);
+  --material: rgba(11, 11, 11, 0.7);
+  --material-borde: rgba(255, 255, 255, 0.08);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.6);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.6);
+  --shadow-lg: 0 24px 60px rgba(0, 0, 0, 0.75);
+}
+
+:root {
+  --font-display: var(--font-sans);
+  /* Fondo de las fotos de producto y categoría: claro en ambos temas para que las fotos de estudio no se vean recortadas. */
+  --foto-fondo: #f2f2f2;
+  /* Texto sobre la foto: la foto va siempre sobre fondo claro, en ambos temas. */
+  --on-foto: #0a0a0a;
+  --on-foto-muted: #5e5e5e;
+  /* Movimiento: salida exponencial y un resorte críticamente amortiguado (sin rebote), como los de Apple. */
+  --ease-salida: cubic-bezier(0.16, 1, 0.3, 1);
+  --resorte: linear(0, 0.2 6.25%, 0.53 15%, 0.77 25%, 0.9 35%, 0.96 45%, 0.985 55%, 1);
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-full: 999px;
+  --layer-dropdown: 1000;
+  --layer-sticky: 1100;
+  --layer-overlay: 1200;
+  --layer-modal: 1300;
+  --layer-toast: 1400;
+}
