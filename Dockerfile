@@ -9,13 +9,13 @@
 # ============================================================
 
 # Etapa 1 - DEPENDENCIAS: solo se reinstalan si cambia package-lock.json (cache de capas).
-FROM node:24-alpine AS deps
+FROM node:26-alpine AS deps
 WORKDIR /app
 COPY package.json package-lock.json ./
 RUN npm ci
 
 # Etapa 2 - BUILD: compila y revisa los tipos.
-FROM node:24-alpine AS build
+FROM node:26-alpine AS build
 WORKDIR /app
 ARG NEXT_PUBLIC_API_URL=http://localhost:8080/api/v1
 ENV NEXT_PUBLIC_API_URL=$NEXT_PUBLIC_API_URL \
@@ -25,7 +25,7 @@ COPY . .
 RUN npm run build
 
 # Etapa 3 - RUNTIME: solo el servidor standalone y los estaticos, con usuario sin privilegios.
-FROM node:24-alpine AS runtime
+FROM node:26-alpine AS runtime
 WORKDIR /app
 ENV NODE_ENV=production \
     NEXT_TELEMETRY_DISABLED=1 \
